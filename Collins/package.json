@@ -1,0 +1,27 @@
+{
+  "name": "collins-mpesa-book-download",
+  "version": "1.0.0",
+  "private": true,
+  "description": "M-Pesa Daraja payment app for book downloads",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "node --watch server/server.js",
+    "test": "echo \"No tests specified\""
+  },
+  "keywords": [
+    "mpesa",
+    "daraja",
+    "payments",
+    "express"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.18.1",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "uuid": "^14.0.1"
+  }
+}
