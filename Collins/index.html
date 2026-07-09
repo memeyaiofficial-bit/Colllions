@@ -1326,10 +1326,10 @@
           })
           .then(function (data) {
             if (data.status === "COMPLETED") {
-              // Payment confirmed! Show download link
-              const downloadUrl = buildApiUrl(
-                "/api/download/" + data.downloadToken,
-              );
+              // Payment confirmed! Show download link to Tiiny.site
+              const downloadUrl =
+                data.bookDownloadUrl ||
+                buildApiUrl("/api/download/" + data.downloadToken);
               showMessage(
                 "success",
                 "✅ Payment confirmed, " + data.fullName + "!",
@@ -1341,7 +1341,7 @@
                   '"</strong> is ready.' +
                   '<br><br><a class="download-btn" href="' +
                   downloadUrl +
-                  '" target="_blank">📥 Download the PDF</a>',
+                  '" target="_blank" rel="noopener">📥 Download Your Book</a>',
               );
 
               payBtn.disabled = true;
