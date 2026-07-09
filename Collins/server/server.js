@@ -47,6 +47,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api/payment", paymentRoutes);
 app.use("/api/mpesa", paymentRoutes);
 
+// The frontend calls /api/download/:token so mount routes at /api level too
+// (only /api/download/:token is used here; other routes under /api are harmless)
+app.use("/api", paymentRoutes);
+
 // Serve static files from the parent directory (the HTML page)
 app.use(express.static(path.resolve(__dirname, "..")));
 
