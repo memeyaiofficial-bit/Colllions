@@ -18,15 +18,14 @@ const { v4: uuidv4 } = require("uuid");
 // When a user buys a book, they get redirected to the URL below
 // ============================================================
 const BOOK_DOWNLOAD_URLS = {
-  "Customer Acquisition Strategies":
-    "https://book-vi-customer-acquisition-strategies-collins-mwangi-1.tiiny.site",
-  "From Idea to First Paying Customer": "https://pdflink.to/bf0ff493/",
+  "Customer Acquisition Strategies": "https://pdflink.to/88f15c4f/",
+  "From Idea to First Paying Customer": "https://pdflink.to/a7abbe10/",
 };
 
 /**
  * POST /api/payment/initiate
  * Initiates M-Pesa STK Push for a book purchase.
- * Body: { fullName, email, phone, bookTitle }
+ * Body: { fullName, email, phone, bookTitle
  */
 router.post("/initiate", async (req, res) => {
   try {
